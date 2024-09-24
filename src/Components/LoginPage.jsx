@@ -18,7 +18,16 @@ const divStyle = {
 };
 
 const LoginPage = () => {
-    const [visible , setVisible] = useState(1)
+    const [visible , setVisible] = useState(true);
+    const [type , setType] = useState("password");
+
+    function handleOnClick(){
+        setVisible(!visible);
+        setType(() => {
+            return (type === "text" ? "password" : "text");
+        })
+    }
+
   return (
     <Box sx={{backgroundColor:"#121111"}}>
 
@@ -31,15 +40,13 @@ const LoginPage = () => {
             <Typography sx={{textAlign:"center" , fontSize:"25px" , mt:"20px"}}>
                 Admin
             </Typography>
-            <Input m ="20px" pHolder = "Email address" />
-            <Input m = "40px"  pHolder= "Password"/>
+            <Input m ="20px" pHolder = "Email address" type = "text"/>
+            <Input m = "40px"  pHolder= "Password" type = {type}/>
             <Box sx={{position:"relative" ,bottom:"48px" , left:"320px" , display:"inline-flex"}}>
-               {visible ? <VisibilityIcon sx={{fontSize:"30px" , marginTop:"5px" , color:"black" , cursor:"pointer"}}/> : <VisibilityOffIcon sx={{fontSize:"30px" , marginTop:"5px" , color:"black" , cursor:"pointer"}}/>}
-               
+               {visible ? <VisibilityIcon onClick={handleOnClick} sx={{fontSize:"30px" , marginTop:"5px" , color:"black" , cursor:"pointer"}}/> : <VisibilityOffIcon onClick={handleOnClick} sx={{fontSize:"30px" , marginTop:"5px" , color:"black" , cursor:"pointer"}}/>}
             </Box>
             <Button sx={{...border , width:"80%" , ml:"10px", mt:"40px" , color:"#FAF7F0"}}>Login</Button>
           
-
             {/* <Typography>
                 Email
             </Typography>
@@ -50,9 +57,9 @@ const LoginPage = () => {
   )
 }
 
-const Input = ({m , pHolder}) =>{
+const Input = ({m , pHolder , type}) =>{
     return <Box sx={{display:"flex" , justifyContent:"center" , mt:`${m}`}}>
-    <input style={{bgcolor:"inherit" , height:"30px" , width:"300px" , borderRadius:"5px" , border:"none" , padding:"5px" , paddingLeft:"10px"}} placeholder={pHolder}/>
+    <input type={type} style={{bgcolor:"inherit" , height:"30px" , width:"300px" , borderRadius:"5px" , border:"none" , padding:"5px" , paddingLeft:"10px"}} placeholder={pHolder}/>
 </Box>
 }
 
