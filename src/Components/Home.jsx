@@ -1,16 +1,11 @@
 import { Box, Stack, Typography } from '@mui/material'
-import React from 'react'
-
+import Pie from './Graphs/Pie.jsx'
+import Line from './Graphs/LineGraph.jsx'
 const Home = () => {
   return (
     <Box sx={{height:"200vh"}}>
         <Stack direction="row">
-          <Typography>
-            hello
-          </Typography>
-          <Typography>
-            world
-          </Typography>
+          <Line/>
         </Stack>
     </Box>
   )
