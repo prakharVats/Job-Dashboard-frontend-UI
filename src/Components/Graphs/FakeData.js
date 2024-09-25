@@ -7,13 +7,15 @@ export const lineChartData = {
         "Friday",
         "Saturday",
         "Sunday",
+        "monday",
+        "Tuesday",
+        "Wednesday",
     ],
     datasets : [
         {
-            label : "steps",
-            data : [3000 , 5000 , 4000 , 3562 , 4512 , 8564 , 6000],
-            BorderColor:"red",
-            color:"red"
+            label : "Github Activity",
+            data : [7 , 0 , 3 , 2 , 3 , 11 , 12 , 7 , 4 , 1],
+            borderColor:"#121111",
         },
     ],
 };
