@@ -3,6 +3,7 @@ import Pie from './Graphs/Pie.jsx'
 import Line from './Graphs/LineGraph.jsx'
 import Table from "./Minor/Table.jsx"
 import Uploads from './Minor/Uploads.jsx'
+import Twenty4 from './Minor/Twenty4.jsx'
 const border= {
   border:"1px solid black"
 }
@@ -30,8 +31,8 @@ const Home = () => {
             <Uploads/>
           </Box>  
         </Stack>
-        <Stack spacing={4} direction="row" sx={{ mt:"20px" , p:"20px"}}>
-          <Table/>
+        <Stack spacing={2} direction="row" sx={{ mt:"20px" , p:"20px"}}>
+          <Twenty4/>
           <Table/>
         </Stack>
     </Box>
