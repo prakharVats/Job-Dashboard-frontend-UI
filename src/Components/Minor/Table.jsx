@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import { Box, Typography } from '@mui/material';
 
 const weight = {
   fontWeight: "bold"
@@ -25,36 +26,39 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper} sx={{boxShadow: "5px 5px 15px rgba(0.3, 0, 0, 0.3)"}}>
-      <Table sx={{ minWidth: 550 }} aria-label="simple table">
-        <TableHead>
-          <TableRow >
-            <TableCell sx={weight}>S/no</TableCell>
-            <TableCell sx={weight} align="left">Company</TableCell>
-            <TableCell sx={weight} align="left">Salary</TableCell>
-            <TableCell sx={weight} align="left">City</TableCell>
-            <TableCell sx={weight} align="left">Type</TableCell>
-            <TableCell sx={weight} align="left">Action</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="left">{row.calories}</TableCell>
-              <TableCell align="left">{row.fat}</TableCell>
-              <TableCell align="left">{row.carbs}</TableCell>
-              <TableCell align="left">{row.protein}</TableCell>
-              <TableCell align="left" sx={{cursor:"pointer"}}><DeleteOutlinedIcon/></TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+        <TableContainer component={Paper} sx={{mt:"10px" , boxShadow: "5px 5px 15px rgba(0.3, 0, 0, 0.3)" , p:"10px"}}>
+          <Typography fontWeight="bold">
+          Total jobs applied : 24
+          </Typography>
+          <Table sx={{ minWidth: 550 }} aria-label="simple table">
+            <TableHead>
+              <TableRow >
+                <TableCell sx={weight}>S/no</TableCell>
+                <TableCell sx={weight} align="left">Company</TableCell>
+                <TableCell sx={weight} align="left">Salary</TableCell>
+                <TableCell sx={weight} align="left">City</TableCell>
+                <TableCell sx={weight} align="left">Type</TableCell>
+                <TableCell sx={weight} align="left">Action</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="left">{row.calories}</TableCell>
+                  <TableCell align="left">{row.fat}</TableCell>
+                  <TableCell align="left">{row.carbs}</TableCell>
+                  <TableCell align="left">{row.protein}</TableCell>
+                  <TableCell align="left" sx={{cursor:"pointer"}}><DeleteOutlinedIcon/></TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
   );
 }
