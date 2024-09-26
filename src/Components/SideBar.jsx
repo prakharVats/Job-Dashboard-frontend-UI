@@ -15,7 +15,7 @@ const SideBar = () => {
         <Tab title="Home" to = "/"/>
         <Tab title="Feed" to = "/feed"/>
         <Tab title="Search Jobs" to = "/Search"/>
-        <Tab title="Drafts" to = "/Drafts"/>
+        <Tab title="Drafts" to = "/drafts"/>
         <Tab title="Uploads" to = "/Uploads"/>
         <Typography sx={{ml:"10px" , mr:"20px" , mt:"40px"}}>
                 Copyright 2024 All rights reserved | This is a job searching <span style={{color:"#f0cb4d"}}>platform</span> 

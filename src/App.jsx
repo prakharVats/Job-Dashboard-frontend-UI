@@ -5,6 +5,8 @@ import SideBar from './Components/SideBar';
 import Home from './Components/Home';
 import { Route, Routes } from 'react-router-dom';
 import Feed from './Components/Feed';
+import Drafts from './Components/Drafts';
+
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/feed" element={<Feed />} />
+            <Route path="/drafts" element={<Drafts />} />
             {/* <Route path="/Login" element={<LoginPage />} /> */}
             {/* <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} /> */}
