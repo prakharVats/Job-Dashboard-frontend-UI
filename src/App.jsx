@@ -3,6 +3,8 @@ import LoginPage from "./Components/LoginPage"
 import "./style.css"
 import SideBar from './Components/SideBar';
 import Home from './Components/Home';
+import { Route, Routes } from 'react-router-dom';
+import Feed from './Components/Feed';
 
 
 function App() {
@@ -14,7 +16,14 @@ function App() {
           <SideBar/>
         </Grid>
         <Grid size={9.8}>
-          <Home/>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/feed" element={<Feed />} />
+            {/* <Route path="/Login" element={<LoginPage />} /> */}
+            {/* <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+        
         </Grid>
       </Grid>
     </>
