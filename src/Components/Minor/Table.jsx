@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 const weight = {
   fontWeight: "bold"
@@ -14,12 +15,12 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
+
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData(1 , "Microsoft" , "42Lpa" , "Bengalore", "On Field"),
+  createData(2 , "Amazon", "72Lpa", "NaN", "Remote"),
+  createData(3 , "Google", "1.2Cr", "Pune", "On Field"),
+  createData(4 , "IBM", "60Lpa", "Hyderabad", "Remote"),
 ];
 
 export default function BasicTable() {
@@ -29,10 +30,11 @@ export default function BasicTable() {
         <TableHead>
           <TableRow >
             <TableCell sx={weight}>S/no</TableCell>
-            <TableCell sx={weight} align="right">Company</TableCell>
-            <TableCell sx={weight} align="right">Salary</TableCell>
-            <TableCell sx={weight} align="right">City</TableCell>
-            <TableCell sx={weight} align="right">Type</TableCell>
+            <TableCell sx={weight} align="left">Company</TableCell>
+            <TableCell sx={weight} align="left">Salary</TableCell>
+            <TableCell sx={weight} align="left">City</TableCell>
+            <TableCell sx={weight} align="left">Type</TableCell>
+            <TableCell sx={weight} align="left">Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -44,10 +46,11 @@ export default function BasicTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="left">{row.calories}</TableCell>
+              <TableCell align="left">{row.fat}</TableCell>
+              <TableCell align="left">{row.carbs}</TableCell>
+              <TableCell align="left">{row.protein}</TableCell>
+              <TableCell align="left"><DeleteOutlinedIcon/></TableCell>
             </TableRow>
           ))}
         </TableBody>
