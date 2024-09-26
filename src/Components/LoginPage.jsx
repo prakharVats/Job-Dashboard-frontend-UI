@@ -42,8 +42,8 @@ const LoginPage = () => {
             </Typography>
             <Input m ="20px" pHolder = "Email address" type = "text"/>
             <Input m = "40px"  pHolder= "Password" type = {type}/>
-            <Box sx={{position:"relative" ,bottom:"48px" , left:"320px" , display:"inline-flex"}}>
-               {visible ? <VisibilityIcon onClick={handleOnClick} sx={{fontSize:"30px" , marginTop:"5px" , color:"black" , cursor:"pointer"}}/> : <VisibilityOffIcon onClick={handleOnClick} sx={{fontSize:"30px" , marginTop:"5px" , color:"black" , cursor:"pointer"}}/>}
+            <Box sx={{position:"relative" ,bottom:"44.5px" , left:"295px" , display:"inline-flex"}}>
+               {visible ? <VisibilityIcon onClick={handleOnClick} sx={{fontSize:"30px" , color:"black" , cursor:"pointer"}}/> : <VisibilityOffIcon onClick={handleOnClick} sx={{fontSize:"30px" , color:"black" , cursor:"pointer"}}/>}
             </Box>
             <Button sx={{...border , width:"80%" , ml:"10px", mt:"40px" , color:"#FAF7F0"}}>Login</Button>
           

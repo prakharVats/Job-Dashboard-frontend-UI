@@ -25,8 +25,8 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} sx={{boxShadow: "5px 5px 15px rgba(0.3, 0, 0, 0.3)"}}>
+      <Table sx={{ minWidth: 550 }} aria-label="simple table">
         <TableHead>
           <TableRow >
             <TableCell sx={weight}>S/no</TableCell>
@@ -50,7 +50,7 @@ export default function BasicTable() {
               <TableCell align="left">{row.fat}</TableCell>
               <TableCell align="left">{row.carbs}</TableCell>
               <TableCell align="left">{row.protein}</TableCell>
-              <TableCell align="left"><DeleteOutlinedIcon/></TableCell>
+              <TableCell align="left" sx={{cursor:"pointer"}}><DeleteOutlinedIcon/></TableCell>
             </TableRow>
           ))}
         </TableBody>

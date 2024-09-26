@@ -10,6 +10,7 @@ import {
   Legend
 } from 'chart.js'
 import { lineChartData } from "./FakeData"
+import { Box } from "@mui/material"
 
 Chart.register(
     CategoryScale ,
@@ -23,9 +24,7 @@ Chart.register(
 
 const LineGraph = () => {
     const options = {};
-  return (
-    <Line  data = {lineChartData}></Line>
-  )
+  return <Line   data = {lineChartData}></Line>
 }
 
 export default LineGraph

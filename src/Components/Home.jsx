@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from '@mui/material'
 import Pie from './Graphs/Pie.jsx'
 import Line from './Graphs/LineGraph.jsx'
 import Table from "./Minor/Table.jsx"
+import Uploads from './Minor/Uploads.jsx'
 const border= {
   border:"1px solid black"
 }
@@ -9,6 +10,7 @@ const border= {
 // const weight = {
 //   fontWeight : "bold"
 // }
+
 const Home = () => {
   // const RowD = ["S/n" , "Company" , "Salary" , "City" , "Type"];
   const DummyData = [
@@ -18,23 +20,20 @@ const Home = () => {
   ]
   const TitleData = [{No : "S/n" , Company : "Company" , Salary : "Salary" , City:"City" , Type:"Type"},]
   return (
-    <Box sx={{height:"200vh"}}>
+    <Box sx={{height:"200vh" , pt:"10px"}}>
         <Stack direction="row">
           {/* Github activity */}
-          <Box sx={{height:"300px" , width:"600px" , p:"20px" }}>
+          <Box sx={{height:"300px" , width:"600px" , p:"10px" }}>
             <Line/>
           </Box>
-
           {/* Uploads */}
-          <Box sx={{height:"300px" , width:"600px" , p:"20px"  , ...border}}>
-            {/* first row */}
-            
-           
+          <Box sx={{height:"300px" , width:"600px"}}>
+            <Uploads/>
           </Box>  
         </Stack>
-        <Stack direction="row">
-        <Table/>
-        <Table/>
+        <Stack spacing={4} direction="row" sx={{p:"20px" , mt:"20px"}}>
+          <Table/>
+          <Table/>
         </Stack>
     </Box>
   )
